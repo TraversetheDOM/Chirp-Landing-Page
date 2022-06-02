@@ -1,0 +1,103 @@
+/* For screen sizes of 650ox and above */
+@media screen and (min-width: 40.6em) {
+  .btn {
+    display: none;
+  }
+
+  .nav,
+  .nav.active {
+    all: unset;
+  }
+
+  .nav_list {
+    flex-direction: row;
+  }
+
+  .hero_title {
+    max-width: 55%;
+  }
+
+  .product_feedback {
+    max-width: 73%;
+  }
+
+  .features_title {
+    max-width: 50%;
+  }
+
+  .section_testimonial > .container {
+    padding-right: 0;
+  }
+
+  .testimonial_components {
+    grid-template-columns: repeat(3, 35rem);
+    overflow-x: scroll;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .container {
+    max-width: 102.4rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .hero_image {
+    grid-column: 2/-1;
+  }
+
+  .hero_text_box {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .hero_title,
+  .product_feedback {
+    max-width: 100%;
+  }
+
+  .btn_cta:is(:link, :visited) {
+    display: inline-flex;
+  }
+
+  .btn_outline:is(:link, :visited) {
+    display: inline-block;
+    transform: translateY(-0.7rem);
+    margin-left: var(--space-4);
+  }
+
+  .features_title {
+    width: 41%;
+  }
+
+  .feature_components {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .testimonial_components {
+    grid-template-columns: repeat(3, 0.5fr);
+    overflow-x: unset;
+  }
+
+  .section_testimonial > .container {
+    padding-right: var(--space-4-5);
+  }
+
+  .btn_price-plan:is(:link, :visited) {
+    display: flex;
+  }
+
+  .footer_list {
+    gap: 20px;
+  }
+}
+
+/* For screen size at 1200px */
+@media screen and (min-width: 75em) {
+  .container {
+    max-width: 120rem;
+  }
+}

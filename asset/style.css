@@ -1,0 +1,535 @@
+:root {
+  /* Colors */
+  --blue-1: hsl(197, 100%, 47%);
+  --hover-blue-1: hsl(197, 100%, 23%);
+  --blue-2: hsl(203, 89%, 53%);
+  --hover-blue-2: hsl(203, 79%, 32%);
+  --dark-green: hsl(196, 66%, 36%);
+  --pale-yellow: hsl(38, 50%, 97%);
+  --orange: hsl(38, 100%, 57%);
+  --black: hsl(0, 0%, 0%);
+  --light-green: hsl(166, 62%, 84%);
+  --nickel: hsl(0, 0%, 45%);
+  --white: hsl(0, 0%, 100%);
+  --gray: hsl(210, 10%, 23%);
+
+  /* Typography */
+  --ff-Inter: "Inter", sans-serif;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fs-1: clamp(0.64rem, calc(0.62rem + 0.08vw), 0.74rem);
+  --fs-2: clamp(0.74rem, calc(0.7rem + 0.09vw), 0.83rem);
+  --fs-3: clamp(0.82rem, calc(0.78rem + 0.1vw), 0.93rem);
+  --fs-4: clamp(0.92rem, calc(0.88rem + 0.12vw), 1.05rem);
+  --fs-5: clamp(1.04rem, calc(0.99rem + 0.13vw), 1.19rem);
+  --fs-6: clamp(1.17rem, calc(1.12rem + 0.15vw), 1.33rem);
+  --fs-7: clamp(1.31rem, calc(1.26rem + 0.17vw), 1.5rem);
+  --fs-8: clamp(1.48rem, calc(1.42rem + 0.19vw), 1.69rem);
+  --fs-9: clamp(1.66rem, calc(1.59rem + 0.21vw), 1.9rem);
+  --fs-10: clamp(1.87rem, calc(1.79rem + 0.24vw), 2.14rem);
+  --fs-11: clamp(2.1rem, calc(2.02rem + 0.27vw), 2.4rem);
+  --fs-12: clamp(2.37rem, calc(2.27rem + 0.3vw), 2.7rem);
+  --fs-13: clamp(2.7rem, calc(2.54rem + 0.34vw), 3.04rem);
+  --fs-14: clamp(3rem, calc(2.8rem + 0.38vw), 3.4rem);
+  --fs-15: clamp(3.4rem, calc(3.2rem + 0.43vw), 3.8rem);
+  --fs-16: clamp(3.8rem, calc(3.63rem + 0.48vw), 4.32rem);
+
+  /* Spacing */
+  --space-1: clamp(0.3rem, calc(0.3rem + 0vw), 0.3rem);
+  --space-2: clamp(0.5rem, calc(0.46rem + 0.09vw), 0.61rem);
+  --space-3: clamp(1.1rem, calc(1.07rem + 0.09vw), 1.2rem);
+  --space-4: clamp(1.6rem, calc(1.54rem + 0.18vw), 1.81rem);
+  --space-5: clamp(2.1rem, calc(2.02rem + 0.27vw), 2.4rem);
+  --space-6: clamp(3.2rem, calc(3.1rem + 0.36vw), 3.6rem);
+  --space-7: clamp(4.21rem, calc(4.03rem + 0.54vw), 4.8rem);
+  --space-8: clamp(6.3rem, calc(6.05rem + 0.8vw), 7.2rem);
+  --space-9: clamp(8.4rem, calc(8.06rem + 1.07vw), 9.6rem);
+  --space-10: clamp(12.61rem, calc(12.08rem + 1.61vw), 14.4rem);
+  --space-11: clamp(16.8rem, calc(16.11rem + 2.14vw), 19.2rem);
+
+  /* Paired Custom Spacing */
+  --space-1-2: clamp(0.3rem, calc(0.21rem + 0.27vw), 0.61rem);
+  --space-2-3: clamp(0.5rem, calc(0.3rem + 0.63vw), 1.12rem);
+  --space-3-4: clamp(1.1rem, calc(0.9rem + 0.63vw), 1.81rem);
+  --space-4-5: clamp(1.6rem, calc(1.38rem + 0.71vw), 2.4rem);
+  --space-5-6: clamp(2.1rem, calc(1.66rem + 1.34vw), 3.6rem);
+  --space-6-7: clamp(3.2rem, calc(2.74rem + 1.43vw), 4.8rem);
+  --space-7-8: clamp(4.21rem, calc(3.34rem + 2.68vw), 7.2rem);
+  --space-8-9: clamp(6.3rem, calc(5.36rem + 2.95vw), 9.6rem);
+  --space-9-10: clamp(8.4rem, calc(6.69rem + 5.36vw), 14.4rem);
+  --space-10-11: clamp(12.61rem, calc(10.72rem + 5.89vw), 19.2rem);
+  --space-5-7: clamp(2.1rem, calc(1.33rem + 2.41vw), 4.8rem);
+  --space-7-9: clamp(4.21rem, calc(2.66rem + 4.82vw), 9.6rem);
+
+  /* Transition */
+  --transition: all 0.4s;
+
+  /* Box-shadow */
+  --shadow-1: 7px 9px 10px hsla(0, 0%, 0%, 0.18);
+
+  /* Radius */
+  --radius: 4px;
+}
+
+/* HEDER  */
+
+.container {
+  padding-inline: var(--space-4-5);
+  padding-left: var(--space-4-5);
+  padding-right: var(--space-4-5);
+  margin: 0 auto;
+}
+
+.header {
+  padding-top: var(--space-6-7);
+  padding-bottom: var(--space-5-6);
+  background-color: var(--pale-yellow);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 90;
+}
+
+.header_content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav {
+  margin-left: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 50rem;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--pale-yellow);
+  z-index: 90;
+  transform: translateX(100%);
+  pointer-events: none;
+  visibility: hidden;
+  transition: all 0.32s;
+  opacity: 0;
+}
+
+.nav.active {
+  transform: translateX(0);
+  visibility: visible;
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.nav_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav_list_item {
+  list-style-type: none;
+}
+
+.nav_link:is(:link, :visited) {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--gray);
+  font-weight: var(--fw-500);
+  font-size: var(--fs-8);
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.nav_link:is(:hover, :active, :focus) {
+  color: var(--blue-2);
+}
+
+.nav_logo {
+  display: inline-block;
+}
+
+.nav_link.nav_link_cta:is(:link, :visited) {
+  display: flex;
+  color: var(--white);
+  background-color: var(--blue-1);
+  border-radius: var(--radius);
+  font-weight: var(--fw-700);
+  font-size: var(--fs-8);
+  padding: var(--space-4) var(--space-6);
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.nav_link.nav_link_cta:is(:hover, :active, :focus) {
+  background-color: var(--hover-blue-1);
+}
+
+.btn {
+  cursor: pointer;
+  display: block;
+  background: none;
+  border: none;
+  transition: all 0.4s;
+}
+
+.btn:is(:hover, :active, :focus) {
+  opacity: 0.6;
+}
+
+/* HERO */
+.hero_section {
+  background-color: var(--pale-yellow);
+  padding-top: var(--space-9-10);
+  padding-bottom: var(--space-5);
+}
+
+.hero {
+  display: grid;
+  gap: 40px;
+}
+
+.hero_title {
+  color: var(--black);
+  font-weight: var(--fw-700);
+  font-size: var(--fs-13);
+  line-height: 1.2;
+  margin-bottom: var(--space-4);
+}
+
+.hero_description {
+  color: var(--nickel);
+  font-weight: var(--fw-400);
+  font-size: var(--fs-10);
+  line-height: 1.7;
+  margin-bottom: var(--space-4);
+}
+
+.btn_outline:is(:link, :visited) {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: var(--dark-green);
+  font-weight: var(--fw-700);
+  font-size: var(--fs-8);
+}
+
+.btn_cta:is(:link, :visited) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--white);
+  background-color: var(--blue-1);
+  padding: var(--space-4) var(--space-6);
+  border-radius: var(--radius);
+  font-weight: var(--fw-700);
+  font-size: var(--fs-8);
+  margin-bottom: var(--space-4);
+}
+
+.price-plan_twitter_logo {
+  display: inline;
+}
+
+.customer_images {
+  display: flex;
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-5);
+}
+
+.customer_img {
+  height: 4rem;
+  width: 4rem;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  margin-left: -1.5rem;
+}
+
+.customer_img:first-child {
+  margin-left: 0;
+}
+
+.product_feedback {
+  font-weight: var(--fw-400);
+  color: var(--nickel);
+  font-size: var(--fs-10);
+}
+
+.product_feedback > span {
+  font-weight: var(--fw-600);
+  color: var(--dark-green);
+}
+
+/* Features */
+.section_features {
+  padding-block: var(--space-8-9);
+  padding-top: var(--space-8-9);
+  padding-bottom: var(--space-8-9);
+}
+
+.features_title {
+  color: var(--black);
+  font-weight: var(--fw-700);
+  font-size: var(--fs-13);
+  line-height: 1.2;
+  margin-bottom: var(--space-6);
+}
+
+.feature_components {
+  display: grid;
+  gap: 20px;
+}
+
+.feature_card {
+  border: 1px solid var(--nickel);
+  padding: var(--space-4);
+  border-radius: 4px;
+}
+
+.feature_card > span {
+  font-size: var(--fs-16);
+}
+
+.feature_card_title {
+  color: var(--black);
+  margin-bottom: var(--space-4);
+  font-weight: var(--fw-600);
+  font-size: var(--fs-9);
+  line-height: 1.3;
+}
+
+.feature_card_desscription {
+  color: var(--nickel);
+  line-height: 1.6;
+  font-weight: var(--fw-400);
+  font-size: var(--fs-8);
+}
+
+/* TESTIMONIAL */
+.section_testimonial {
+  padding-block: var(--space-8-9);
+  padding-top: var(--space-8-9);
+  padding-bottom: var(--space-8-9);
+  background-color: var(--light-green);
+}
+
+.testimonial_components {
+  display: grid;
+  gap: 20px;
+}
+
+.testimonial_title {
+  color: var(--black);
+  font-weight: var(--fw-700);
+  font-size: var(--fs-13);
+  line-height: 1.2;
+  margin-bottom: var(--space-6);
+}
+
+.testimonial_card {
+  background-color: var(--white);
+  border-radius: 4px;
+  padding: var(--space-4-5);
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial_name {
+  font-weight: var(--fw-700);
+  color: var(--black);
+  font-size: var(--fs-10);
+  line-height: 1.2;
+}
+
+.testimonial_username {
+  font-weight: var(--fw-400);
+  color: var(--nickel);
+  line-height: 1.7;
+  font-size: var(--fs-9);
+}
+
+.testimonial_handle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: var(--space-4);
+}
+
+.testimonial_logo {
+  margin-left: auto;
+}
+
+.testimonial_card_photo {
+  height: 7.4rem;
+  width: 7.4rem;
+}
+
+.testimonial_description {
+  margin-bottom: var(--space-4);
+  font-weight: var(--fw-400);
+  color: var(--nickel);
+  font-size: var(--fs-9);
+}
+
+.testimonial_stats {
+  display: flex;
+  gap: 10px;
+}
+
+.testimonial_like_rating {
+  color: var(--nickel);
+  font-size: var(--fs-9);
+  font-weight: var(--fw-400);
+}
+
+.date {
+  margin-left: auto;
+  color: var(--nickel);
+  font-size: var(--fs-9);
+  font-weight: var(--fw-400);
+}
+
+.like_button {
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+/* PRICING PLAN */
+.section_price-plan {
+  padding-block: var(--space-8-9);
+  padding-top: var(--space-8-9);
+  padding-bottom: var(--space-8-9);
+}
+
+.price-plan_text_box {
+  text-align: center;
+  padding-bottom: var(--space-7-8);
+}
+
+.price-plan_title {
+  color: var(--black);
+  font-weight: var(--fw-700);
+  font-size: var(--fs-13);
+  line-height: 1.2;
+  margin-bottom: var(--space-2-3);
+}
+
+.price-plan_description {
+  color: var(--nickel);
+  font-weight: var(--fw-400);
+  font-size: var(--fs-10);
+  line-height: 1.7;
+  margin-bottom: var(--space-4);
+}
+
+.price-plan_wrapper {
+  background-color: var(--pale-yellow);
+  border: 1px solid var(--orange);
+  padding: var(--space-4);
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.pirce-plan_container_title {
+  color: var(--nickel);
+  font-weight: var(--fw-500);
+  font-size: var(--fs-10);
+  line-height: 1.6;
+}
+
+.price-plan_amount {
+  color: var(--nickel);
+  font-weight: var(--fs-500);
+  line-height: 1.6;
+  font-size: var(--fs-10);
+  margin-bottom: var(--space-5);
+}
+
+.price-plan_amount > span {
+  color: var(--black);
+  font-weight: var(--fw-600);
+  font-size: var(--fs-14);
+}
+
+.price-plan_list_item {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: var(--fw-400);
+  color: var(--nickel);
+  font-size: var(--fs-9);
+}
+
+.btn_price-plan:is(:link, :visited) {
+  background-color: var(--blue-2);
+  padding: var(--space-3) var(--space-5);
+  font-size: var(--fs-6);
+}
+
+.price-plan_list {
+  border-top: 1px solid var(--nickel);
+  border-bottom: 1px solid var(--nickel);
+  margin-bottom: var(--space-4);
+}
+
+.price-plan_list_item:first-child {
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.price-plan_list_item:last-of-type {
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-5);
+}
+
+/* FOOTER */
+.section_footer {
+  padding-block: var(--space-6-7);
+  padding-top: var(--space-6-7);
+  padding-bottom: var(--space-6-7);
+  background-color: var(--light-green);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer_list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer_link:is(:link, :visited) {
+  text-decoration: none;
+  color: var(--black);
+  font-weight: var(--fw-400);
+  font-size: var(--fs-10);
+  display: inline-block;
+}
+
+.footer_link:is(:hover, :focus, :active) {
+  color: var(--hover-blue-2);
+}
+
+.copyright {
+  margin-top: var(--space-7);
+  text-align: center;
+  font-weight: var(--fw-600);
+}
