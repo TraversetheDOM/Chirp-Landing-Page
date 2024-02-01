@@ -35,8 +35,8 @@ _A view of the landing page on a medium sized phone_
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/TraversetheDOM/Chirp-Landing-Page)
-- Live Site URL: [Add live site URL here](https://TraversetheDOM.github.io/Chirp-Landing-Page/)
+- Solution URL: [Add solution URL here](https://github.com/stephenikuomola/Chirp-Landing-Page)
+- Live Site URL: [Add live site URL here](https://stephenikuomola.github.io/Chirp-Landing-Page/)
 
 ## My process
 
@@ -216,5 +216,5 @@ For my development, I will be carrrying out more projects to improve my CSS and 
 
 ## Author
 
-- Twitter - [@\_salutDami](https://www.twitter.com/_salutDami)
+- Twitter - [@\_salutDami](https://www.twitter.com/stephenikuomola)
 - Linkedin- [Ikuomola Stephen](https://www.linkedin.com/in/ikuomola-stephen/)
